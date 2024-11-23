@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="./output.css">
+    <script src="script.js" defer></script>
     <title>Project2 Update css var using js</title>
 </head>
 <body>
     <div class="h-screen max-w-full border-black border-4 flex justify-center items-center">
-        <div class="flex flex-col gap-6 border border-gray-800 rounded-lg p-10 items-center justify-center">
+        <div class="flex flex-col gap-8 border border-gray-800 rounded-lg p-10 items-center justify-center">
             <h2 class="text-mono uppercase font-semibold text-4xl">Update CSS Variables with <span class="">JS</span></h2>
             
             <div class="controls flex gap-4">
                 <label class="font-mono font-semibold" for="spacing">Spacing</label>
-                <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+                <input id="spacing" type="range" name="spacing" min="10" max="100" value="10" data-sizing="px">
                 <label class="font-mono font-semibold" for="blur">Blur:</label>
-                <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+                <input id="blur" type="range" name="blur" min="0" max="10" value="10" data-sizing="px">
                 <label class="font-mono font-semibold" for="base">Base Color</label>
                 <input id="base" type="color" name="base" value="#ffc600">
             </div>
 
-            <img class="w-[340px] h-[270px] mt-5" src="female.jpg" alt="female img">
+            <img class="w-[340px] h-[270px] mt-5 p-[var(--spacing)] bg-[var(--base)] blur-[var(--blur)]" src="female.jpg" alt="female img">
         </div>
     </div> 
 </body>
